@@ -16,6 +16,9 @@
       "include": "#numbers"
     },
     {
+      "include": "#names"
+    },
+    {
       "include": "#embedded-javascript"
     },
     {
@@ -46,8 +49,24 @@
     "names": {
       "patterns": [
         {
-          "name": "variable.webots-vrml",
-          "match": "\\b[\\w-_]+\\b"
+          "match": "\\b(SFBool|MFBool|SFColor|MFColor|SFFloat|MFFloat|SFImage|SFInt32|MFInt32|SFNode|MFNode|SFRotation|MFRotation|SFString|MFString|SFTime|MFTime|SFVec2f|MFVec2f|SFVec3f|MFVec3f)\\b",
+          "name": "entity.name.type.webots-vrml"
+        },
+        {
+          "name": "entity.name.tag.webots-vrml",
+          "match": "(?<=(DEF|USE)\\s+)\\b[\\w_][\\w\\d\\-_]*\\b"
+        },
+        {
+          "name": "entity.name.type.webots-vrml",
+          "match": "(?<=(PROTO)\\s+)\\b[\\w_][\\w\\d\\-_]*\\b"
+        },
+        {
+          "name": "entity.name.type.webots-vrml",
+          "match": "\\b[\\w_][\\w\\d\\-_]*\\b(?=\\s*\\{)"
+        },
+        {
+          "name": "variable.name.webots-vrml",
+          "match": "\\b[\\w_][\\w\\d\\-_]*\\b"
         }
       ]
     },
