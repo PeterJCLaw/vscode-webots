@@ -1,0 +1,52 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Webots",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"comments": {
+			"name": "comment.line.number-sign",
+			"match": "#.*"
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.webots",
+				"match": "\\b(DEF|USE|EXTERNPROTO|PROTO|IS|FALSE|TRUE|NULL)\\b"
+			}]
+		},
+		"names": {
+			"patterns": [{
+				"name": "variable",
+				"match": "\\b[\\w-_]+\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.webots",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.webots",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"name": "constant.numeric.webots",
+			"match": "-?\\d+(\\.\\d+)?"
+		}
+	},
+	"scopeName": "source.webots"
+}
