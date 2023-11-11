@@ -24,7 +24,7 @@
   ],
   "repository": {
     "comments": {
-      "name": "comment.line.number-sign",
+      "name": "comment.line.number-sign.webots-vrml",
       "match": "#.*"
     },
     "keywords": {
@@ -38,7 +38,7 @@
     "names": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.webots-vrml",
           "match": "\\b[\\w-_]+\\b"
         }
       ]
