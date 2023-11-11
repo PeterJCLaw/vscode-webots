@@ -70,7 +70,7 @@
     },
     "numbers": {
       "name": "constant.numeric.webots-vrml",
-      "match": "-?\\d+(\\.\\d+)?"
+      "match": "\\b-?\\d+(\\.\\d+)?\\b"
     },
     "embedded-javascript": {
       "begin": "%<=?",
