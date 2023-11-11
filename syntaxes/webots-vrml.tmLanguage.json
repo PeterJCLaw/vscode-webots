@@ -14,6 +14,12 @@
     },
     {
       "include": "#numbers"
+    },
+    {
+      "include": "#embedded-javascript"
+    },
+    {
+      "include": "#embedded-lua"
     }
   ],
   "repository": {
@@ -45,12 +51,42 @@
         {
           "name": "constant.character.escape.webots-vrml",
           "match": "\\\\."
+        },
+        {
+          "include": "#embedded-javascript"
+        },
+        {
+          "include": "#embedded-lua"
         }
       ]
     },
     "numbers": {
       "name": "constant.numeric.webots-vrml",
       "match": "-?\\d+(\\.\\d+)?"
+    },
+    "embedded-javascript": {
+      "begin": "%<=?",
+      "beginCaptures": {
+        "0": { "name": "storage.type" }
+      },
+      "end": ">%",
+      "endCaptures": {
+        "0": { "name": "storage.type" }
+      },
+      "name": "meta.embedded.block.javascript",
+      "patterns": [{ "include": "source.js" }]
+    },
+    "embedded-lua": {
+      "begin": "%{=?",
+      "beginCaptures": {
+        "0": { "name": "storage.type" }
+      },
+      "end": "}%",
+      "endCaptures": {
+        "0": { "name": "storage.type" }
+      },
+      "name": "meta.embedded.block.lua",
+      "patterns": [{ "include": "source.lua" }]
     }
   }
 }
