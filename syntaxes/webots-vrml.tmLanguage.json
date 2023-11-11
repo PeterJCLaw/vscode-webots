@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Webots",
+  "scopeName": "source.webots-vrml",
+  "name": "Webots VRML",
   "patterns": [
     {
       "include": "#comments"
@@ -23,7 +24,7 @@
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.control.webots",
+          "name": "keyword.control.webots-vrml",
           "match": "\\b(DEF|USE|EXTERNPROTO|PROTO|IS|FALSE|TRUE|NULL)\\b"
         }
       ]
@@ -37,20 +38,19 @@
       ]
     },
     "strings": {
-      "name": "string.quoted.double.webots",
+      "name": "string.quoted.double.webots-vrml",
       "begin": "\"",
       "end": "\"",
       "patterns": [
         {
-          "name": "constant.character.escape.webots",
+          "name": "constant.character.escape.webots-vrml",
           "match": "\\\\."
         }
       ]
     },
     "numbers": {
-      "name": "constant.numeric.webots",
+      "name": "constant.numeric.webots-vrml",
       "match": "-?\\d+(\\.\\d+)?"
     }
-  },
-  "scopeName": "source.webots"
+  }
 }
