@@ -30,8 +30,16 @@
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.control.webots-vrml",
-          "match": "\\b(DEF|USE|EXTERNPROTO|PROTO|IS|FALSE|TRUE|NULL)\\b"
+          "name": "constant.language",
+          "match": "\\b(FALSE|TRUE|NULL)\\b"
+        },
+        {
+          "name": "keyword.control",
+          "match": "\\b(DEF|USE|EXTERNPROTO|PROTO|IS)\\b"
+        },
+        {
+          "name": "storage.modifier",
+          "match": "\\bfield\\b"
         }
       ]
     },
